@@ -1,0 +1,105 @@
+{
+  "header": {
+    "title": "Claude Sandra TCHOKOUAGA",
+    "nav": {
+      "accueil": "Home",
+      "apropos": "About",
+      "projets": "My Projects",
+      "objectifs": "My Goals",
+      "langages": "My Languages",
+      "competences": "Skills",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "welcome": "Welcome!",
+    "iam": "I am",
+    "name": "Claude Sandra TCHOKOUAGA",
+    "description": "Passionate web developer with over 5 years of experience in Java and full-stack development, I transform ideas into robust and innovative digital solutions. My expertise covers the entire development cycle, from database modeling to creating modern and intuitive interfaces. I am committed to delivering remarkable user experiences that combine performance, reliability, and creativity."
+  },
+  "apropos": {
+    "title": "About",
+    "parcours": "My Journey",
+    "description": "Passionate Full‑stack developer, I transform ideas into performant and scalable digital solutions. My expertise covers Java/Spring Boot and Laravel for robust backends, as well as React, Tailwind CSS and WordPress for modern and intuitive interfaces. I integrate generative AI into my process to optimize productivity and add value to each project. Available to take on new challenges, I am committed to creating remarkable user experiences, combining reliability, creativity and technical excellence."
+  },
+  "objectifs": {
+    "title": "My Goals",
+    "excellence": {
+      "title": "Technical Excellence",
+      "description": "Master the latest technologies and best practices to deliver high-quality, performant, and scalable solutions."
+    },
+    "innovation": {
+      "title": "Continuous Innovation",
+      "description": "Explore new approaches and technologies to create innovative solutions that meet evolving user needs."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Work effectively in teams to share knowledge and expertise, and create exceptional products together."
+    },
+    "croissance": {
+      "title": "Personal Growth",
+      "description": "Continuously develop my skills and knowledge to stay at the forefront of the industry and offer added value."
+    },
+    "impact": {
+      "title": "User Impact",
+      "description": "Create applications that truly improve users' lives by meeting their needs intuitively and effectively."
+    },
+    "leadership": {
+      "title": "Technical Leadership",
+      "description": "Develop my leadership skills to guide technical teams and make informed architectural decisions."
+    }
+  },
+  "langages": {
+    "title": "My Languages & Technologies & Framework",
+    "intermediaire": "Intermediate",
+    "avance": "Advanced"
+  },
+  "projets": {
+    "title": "My Projects",
+    "termine": "Completed Projects",
+    "encours": "Ongoing Projects",
+    "technologies": "Technologies Used:",
+    "defis": "Challenges & Solutions:",
+    "lienGithub": "GitHub Link",
+    "demoLive": "Live Demo",
+    "progression": "Progress:",
+    "preview": "Preview"
+  },
+  "competences": {
+    "title": "My Technical Skills",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "database": "Database & DevOps",
+    "tools": "Tools & Technologies"
+  },
+  "contact": {
+    "title": "Contact",
+    "parlons": "Let's talk about your project",
+    "description": "I am currently looking for new opportunities and stimulating challenges within innovative teams where I can leverage my skills and continue to grow professionally.",
+    "email": "Email",
+    "telephone": "Phone",
+    "localisation": "Location",
+    "cv": "Discover my journey and skills in detail",
+    "telechargerCV": "Download my CV",
+    "envoyerMessage": "Send me a message",
+    "nom": "Name",
+    "emailPlaceholder": "Your name",
+    "emailField": "your@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Your message...",
+    "envoyer": "Send message",
+    "succes": "Message sent successfully!"
+  },
+  "footer": {
+    "title": "Claude Sandra TCHOKOUAGA",
+    "description": "Passionate web developer creating innovative and performant solutions.",
+    "navigation": "Navigation",
+    "reseaux": "Social Networks",
+    "copyright": "© 2024 Claude Sandra TCHOKOUAGA. All rights reserved."
+  },
+  "language": {
+    "toggle": "Language",
+    "french": "French",
+    "english": "English"
+  }
+}

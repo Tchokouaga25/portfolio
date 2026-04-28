@@ -1,0 +1,105 @@
+{
+  "header": {
+    "title": "Claude Sandra TCHOKOUAGA",
+    "nav": {
+      "accueil": "Accueil",
+      "apropos": "À propos",
+      "projets": "Mes projets",
+      "objectifs": "Mes objectifs",
+      "langages": "Mes langages",
+      "competences": "Compétences",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "welcome": "Bienvenue!",
+    "iam": "Je suis",
+    "name": "Claude Sandra TCHOKOUAGA",
+    "description": "Développeur web passionné, avec plus de 5 ans d'expérience en Java et en développement full-stack, je transforme des idées en solutions numériques robustes et innovantes. Mon expertise couvre l'ensemble du cycle de développement, de la modélisation de bases de données à la création d'interfaces modernes et intuitives. Je m'engage à offrir des expériences utilisateur remarquables qui allient performance, fiabilité et créativité."
+  },
+  "apropos": {
+    "title": "À Propos",
+    "parcours": "Mon Parcours",
+    "description": "Développeur Full‑stack passionné, je transforme des idées en solutions numériques performantes et évolutives. Mon expertise couvre Java/Spring Boot et Laravel pour des backends robustes, ainsi que React, Tailwind CSS et WordPress pour des interfaces modernes et intuitives. J'intègre l'IA générative dans mon processus afin d'optimiser la productivité et d'apporter une valeur ajoutée à chaque projet. Disponible pour relever de nouveaux défis, je m'engage à créer des expériences utilisateur remarquables, alliant fiabilité, créativité et excellence technique."
+  },
+  "objectifs": {
+    "title": "Mes Objectifs",
+    "excellence": {
+      "title": "Excellence Technique",
+      "description": "Maîtriser les dernières technologies et best practices pour livrer des solutions de haute qualité, performantes et évolutives."
+    },
+    "innovation": {
+      "title": "Innovation Continue",
+      "description": "Explorer de nouvelles approches et technologies pour créer des solutions innovantes qui répondent aux besoins évolutifs des utilisateurs."
+    },
+    "collaboration": {
+      "title": "Collaboration",
+      "description": "Travailler efficacement en équipe pour partager connaissances et expertise, et créer ensemble des produits exceptionnels."
+    },
+    "croissance": {
+      "title": "Croissance Personnelle",
+      "description": "Développer continuellement mes compétences et connaissances pour rester à la pointe de l'industrie et offrir une valeur ajoutée."
+    },
+    "impact": {
+      "title": "Impact Utilisateur",
+      "description": "Créer des applications qui améliorent réellement la vie des utilisateurs en répondant à leurs besoins de manière intuitive et efficace."
+    },
+    "leadership": {
+      "title": "Leadership Technique",
+      "description": "Développer mes compétences en leadership pour guider les équipes techniques et prendre des décisions architecturales éclairées."
+    }
+  },
+  "langages": {
+    "title": "Mes Langages & Technologies & Framework",
+    "intermediaire": "Intermédiaire",
+    "avance": "Avancé"
+  },
+  "projets": {
+    "title": "Mes Projets",
+    "termine": "Projets Terminés",
+    "encours": "Projets en Cours",
+    "technologies": "Technologies Utilisées:",
+    "defis": "Défis & Solutions:",
+    "lienGithub": "Lien GitHub",
+    "demoLive": "Demo Live",
+    "progression": "Progression:",
+    "preview": "Preview"
+  },
+  "competences": {
+    "title": "Mes Compétences Techniques",
+    "frontend": "Développement Frontend",
+    "backend": "Développement Backend",
+    "database": "Base de Données & DevOps",
+    "tools": "Outils & Technologies"
+  },
+  "contact": {
+    "title": "Contact",
+    "parlons": "Parlons de votre projet",
+    "description": "Je suis actuellement à la recherche de nouvelles opportunités et de défis stimulants au sein d'équipes innovantes où je pourrai mettre à profit mes compétences et continuer à grandir professionnellement.",
+    "email": "Email",
+    "telephone": "Téléphone",
+    "localisation": "Localisation",
+    "cv": "Découvrez mon parcours et mes compétences en détail",
+    "telechargerCV": "Télécharger mon CV",
+    "envoyerMessage": "Envoyez-moi un message",
+    "nom": "Nom",
+    "emailPlaceholder": "Votre nom",
+    "emailField": "votre@email.com",
+    "message": "Message",
+    "messagePlaceholder": "Votre message...",
+    "envoyer": "Envoyer le message",
+    "succes": "Message envoyé avec succès !"
+  },
+  "footer": {
+    "title": "Claude Sandra TCHOKOUAGA",
+    "description": "Développeur web passionné créant des solutions innovantes et performantes.",
+    "navigation": "Navigation",
+    "reseaux": "Réseaux Sociaux",
+    "copyright": "© 2024 Claude Sandra TCHOKOUAGA. Tous droits réservés."
+  },
+  "language": {
+    "toggle": "Langue",
+    "french": "Français",
+    "english": "English"
+  }
+}
