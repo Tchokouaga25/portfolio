@@ -1,100 +1,180 @@
 'use client';
 
 export default function CompetencesSection() {
-  const frontendSkills = [
-    { name: "React.js", niveau: 85, color: "bg-blue-500", bgColor: "bg-blue-100 dark:bg-blue-900", textColor: "text-blue-600 dark:text-blue-400" },
-    { name: "TypeScript", niveau: 75, color: "bg-cyan-500", bgColor: "bg-cyan-100 dark:bg-cyan-900", textColor: "text-cyan-600 dark:text-cyan-400" },
-    { name: "Tailwind CSS", niveau: 90, color: "bg-teal-500", bgColor: "bg-teal-100 dark:bg-teal-900", textColor: "text-teal-600 dark:text-teal-400" },
-    { name: "Vue.js 3", niveau: 70, color: "bg-green-500", bgColor: "bg-green-100 dark:bg-green-900", textColor: "text-green-600 dark:text-green-400" }
-  ];
-
-  const backendSkills = [
-    { name: "Java 17", niveau: 80, color: "bg-red-500", bgColor: "bg-red-100 dark:bg-red-900", textColor: "text-red-600 dark:text-red-400" },
-    { name: "Spring Boot", niveau: 85, color: "bg-green-500", bgColor: "bg-green-100 dark:bg-green-900", textColor: "text-green-600 dark:text-green-400" },
-    { name: "Node.js", niveau: 75, color: "bg-yellow-500", bgColor: "bg-yellow-100 dark:bg-yellow-900", textColor: "text-yellow-600 dark:text-yellow-400" },
-    { name: "REST API", niveau: 90, color: "bg-purple-500", bgColor: "bg-purple-100 dark:bg-purple-900", textColor: "text-purple-600 dark:text-purple-400" }
-  ];
-
-  const databaseDevOpsSkills = [
-    { name: "MySQL", niveau: 85, color: "bg-blue-500", bgColor: "bg-blue-100 dark:bg-blue-900", textColor: "text-blue-600 dark:text-blue-400" },
-    { name: "PostgreSQL", niveau: 80, color: "bg-green-500", bgColor: "bg-green-100 dark:bg-green-900", textColor: "text-green-600 dark:text-green-400" },
-    { name: "Docker", niveau: 75, color: "bg-blue-500", bgColor: "bg-blue-100 dark:bg-blue-900", textColor: "text-blue-600 dark:text-blue-400" },
-    { name: "Git/GitHub", niveau: 90, color: "bg-orange-500", bgColor: "bg-orange-100 dark:bg-orange-900", textColor: "text-orange-600 dark:text-orange-400" }
-  ];
-
-  const outilsSkills = [
-    { name: "VS Code", niveau: 95, color: "bg-gray-500", bgColor: "bg-gray-100 dark:bg-gray-700", textColor: "text-gray-600 dark:text-gray-400" },
-    { name: "Git", niveau: 90, color: "bg-red-500", bgColor: "bg-red-100 dark:bg-red-900", textColor: "text-red-600 dark:text-red-400" },
-    { name: "Figma", niveau: 70, color: "bg-purple-500", bgColor: "bg-purple-100 dark:bg-purple-900", textColor: "text-purple-600 dark:text-purple-400" },
-    { name: "IA Générative", niveau: 85, color: "bg-yellow-500", bgColor: "bg-yellow-100 dark:bg-yellow-900", textColor: "text-yellow-600 dark:text-yellow-400" }
-  ];
-
-  const SkillCard = ({ skill }: { skill: any }) => (
-    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow">
-      <div className="flex items-center mb-4">
-        <div className={`w-12 h-12 ${skill.bgColor} rounded-lg flex items-center justify-center mr-3`}>
-          <span className={`${skill.textColor} font-bold text-lg`}>
-            {skill.name.substring(0, 2).toUpperCase()}
-          </span>
-        </div>
-        <div className="flex-1">
-          <h4 className="font-semibold text-gray-900 dark:text-white">{skill.name}</h4>
-          <div className="flex items-center mt-1">
-            <div className="flex-1 bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-              <div className={`${skill.color} h-2 rounded-full`} style={{width: `${skill.niveau}%`}}></div>
-            </div>
-            <span className="ml-2 text-sm text-gray-600 dark:text-gray-400">{skill.niveau}%</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-
   return (
-    <section id="competences" className="py-16 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">Mes Compétences Techniques</h2>
-        
-        {/* Frontend */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-8 text-center text-blue-600 dark:text-blue-400">Développement Frontend</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {frontendSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} />
-            ))}
-          </div>
-        </div>
-
-        {/* Backend */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-8 text-center text-green-600 dark:text-green-400">Développement Backend</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {backendSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} />
-            ))}
-          </div>
-        </div>
-
-        {/* Base de données & DevOps */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-bold mb-8 text-center text-purple-600 dark:text-purple-400">Base de Données & DevOps</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {databaseDevOpsSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} />
-            ))}
-          </div>
-        </div>
-
-        {/* Outils & Autres */}
-        <div>
-          <h3 className="text-2xl font-bold mb-8 text-center text-orange-600 dark:text-orange-400">Outils & Technologies</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {outilsSkills.map((skill, index) => (
-              <SkillCard key={index} skill={skill} />
-            ))}
+    <section id="competences" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      
+      <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
+        Compétences Techniques
+      </h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {/* CMS & Web */}
+      <div className="mb-12">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
+              CMS & Web
+            </h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">WordPress</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Développement et personnalisation de sites web avec WordPress</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Intégration Web</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Personnalisation de thèmes et plugins</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Optimisation SEO</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Création de solutions web optimisées pour le SEO et les performances</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+
+      {/* Outils & Environnement */}
+      <div className="mb-12">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-3">
+              Outils & Environnement
+            </h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Git & GitHub/GitLab</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Gestion de versions avec Git (workflows GitHub / GitLab)</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Docker</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Notions d'intégration et de déploiement continus (CI/CD)</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Postman</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Tests et documentation d'API avec Postman</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">IDE</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Environnements de développement : VS Code / IntelliJ IDEA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Intelligence Artificielle */}
+      <div className="mb-12">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-3">
+              Intelligence Artificielle
+            </h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">IA Générative</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Intégration d'outils d'IA générative dans les workflows de développement</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">API IA</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Expérience dans l'intégration d'API de services d'intelligence artificielle</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Utilisation de l'IA</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Utilisation de l'IA pour : Génération et optimisation du code, Prototypage rapide, Automatisation des tâches répétitives</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Architecture & Bonnes pratiques */}
+      <div className="mb-12">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent mb-3">
+              Architecture & Bonnes pratiques
+            </h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">API RESTful</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Maîtrise des concepts d'architecture microservices</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Architecture</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Application de l'architecture MVC et de modèles de conception modulaires</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Clean Code</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Mise en œuvre des principes SOLID et des bonnes pratiques Clean Code, tests et débogage</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Performance</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Optimisation des performances et stratégies de scalabilité</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Sécurité</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Revue de code, refactorisation et maintien de la qualité du code</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* UX/UI & Design */}
+      <div className="mb-12">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-3">
+              UX/UI & Design
+            </h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Design UX/UI</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Conception d'interfaces intuitives centrées utilisateur</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Responsive</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Principes de design responsive et mobile-first</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Expérience</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Bonnes pratiques d'utilisabilité et d'accessibilité (notions WCAG)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Compétences transversales */}
+      <div>
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent mb-3">
+              Compétences transversales
+            </h3>
+            <div className="space-y-2">
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Résolution de problèmes</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Esprit analytique et résolution de problèmes</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Travail d'équipe</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Communication efficace et travail en équipe</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Autonomie</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Autonomie et gestion du temps</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">Veille</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">Veille technologique, Capacité d'adaptation et apprentissage continu</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
     </section>
   );
 }

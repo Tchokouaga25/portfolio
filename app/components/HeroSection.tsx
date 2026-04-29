@@ -37,7 +37,7 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, [currentImage]);
   return (
-    <section id="accueil" className="relative overflow-hidden pt-8" style={{ minHeight: 'calc(70vh - 6rem)' }}>
+    <section id="accueil" className="relative overflow-hidden pt-4" style={{ minHeight: 'calc(60vh - 4rem)' }}>
       {/* Background image */}
       <div className="absolute inset-0 z-0 transition-all duration-1000">
         <Image
@@ -56,17 +56,17 @@ export default function HeroSection() {
       {/* Subtle overlay for better text readability */}
       <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20 z-10"></div>
       
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 z-30 ">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center" style={{ minHeight: 'calc(85vh - 4rem)' }}>
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-1 z-30 ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center" style={{ minHeight: 'calc(75vh - 2rem)' }}>
           {/* Text content with black transparent background */}
-          <div className=" transform hover:scale-105 transition-all duration-300 bg-black/40 py-4 px-4 rounded-lg">
-            <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold mb-2 text-white">
+          <div className=" transform hover:scale-105 transition-all duration-300 bg-black/40 py-3 px-3 rounded-lg">
+            <h1 className="text-xl sm:text-2xl lg:text-4xl font-bold mb-2 text-white">
               {t('hero.welcome')} 
             </h1>
-            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-6 text-white">
-             {t('hero.iam')} <span className="text-blue-400 text-xl sm:text-2xl lg:text-3xl">{t('hero.name')}</span>
+            <h1 className="text-lg sm:text-xl lg:text-2xl font-bold mb-4 text-white">
+             {t('hero.iam')} <span className="text-blue-400 text-lg sm:text-xl lg:text-2xl">{t('hero.name')}</span>
             </h1>
-            <p className="text-xm sm:text-lg mb-8 text-gray-200 leading-relaxed">
+            <p className="text-sm sm:text-base mb-6 text-gray-200 leading-relaxed">
               {t('hero.description')}
             </p>
 
@@ -119,8 +119,8 @@ export default function HeroSection() {
                         transform: `translateX(${translateX}px) scale(${scale}) rotateY(20deg) rotateX(-20deg)`,
                         opacity: opacity,
                         zIndex: zIndex,
-                        width: '450px',
-                        height: '85%'
+                        width: '350px',
+                        height: '75%'
                       }}
                     >
                       <Image
@@ -139,7 +139,7 @@ export default function HeroSection() {
                       />
                       {/* Tech badge */}
                       {isActive && (
-                        <div className="absolute top-4 right-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg">
+                        <div className="absolute top-3 right-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-2 py-1 rounded-full text-xs font-semibold shadow-lg">
                           {image.tech}
                         </div>
                       )}
@@ -151,28 +151,28 @@ export default function HeroSection() {
               {/* Navigation buttons */}
               <button
                 onClick={prevImage}
-                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors duration-200 z-30"
+                className="absolute left-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1 rounded-full transition-colors duration-200 z-30"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
               </button>
               <button
                 onClick={nextImage}
-                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors duration-200 z-30"
+                className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1 rounded-full transition-colors duration-200 z-30"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
               
               {/* Image indicators */}
-              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-30">
+              <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex space-x-1 z-30">
                 {images.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImage(index)}
-                    className={`w-2 h-2 rounded-full transition-colors duration-200 ${
+                    className={`w-1 h-1 rounded-full transition-colors duration-200 ${
                       index === currentImage ? 'bg-white' : 'bg-white/50'
                     }`}
                   />
