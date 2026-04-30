@@ -1,32 +1,35 @@
 'use client';
 
+import { useI18n } from '@/lib/i18n-context';
+
 export default function CompetencesSection() {
+  const { t } = useI18n();
   return (
-    <section id="competences" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gradient-to-br from-white via-gray-50 to-white dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+    <section id="competences" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gradient-to-br ">
       
       <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
-        Compétences Techniques
+        {t('competences.title')}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
       {/* CMS & Web */}
-      <div className="mb-12">
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+      <div className="mb-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
           <div className="flex-1">
             <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
-              CMS & Web
+              {t('competences.cmsWeb.title')}
             </h3>
             <div className="space-y-2">
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">WordPress</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Développement et personnalisation de sites web avec WordPress</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.cmsWeb.wordpress')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.cmsWeb.wordpressDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Intégration Web</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Personnalisation de thèmes et plugins</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.cmsWeb.integration')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.cmsWeb.integrationDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Optimisation SEO</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Création de solutions web optimisées pour le SEO et les performances</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.cmsWeb.seo')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.cmsWeb.seoDesc')}</p>
               </div>
             </div>
           </div>
@@ -34,28 +37,28 @@ export default function CompetencesSection() {
       </div>
 
       {/* Outils & Environnement */}
-      <div className="mb-12">
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+      <div className="mb-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
           <div className="flex-1">
             <h3 className="text-lg font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-3">
-              Outils & Environnement
+              {t('competences.toolsEnv.title')}
             </h3>
             <div className="space-y-2">
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Git & GitHub/GitLab</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Gestion de versions avec Git (workflows GitHub / GitLab)</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.toolsEnv.git')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.toolsEnv.gitDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Docker</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Notions d'intégration et de déploiement continus (CI/CD)</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.toolsEnv.cicd')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.toolsEnv.cicdDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Postman</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Tests et documentation d'API avec Postman</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.toolsEnv.postman')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.toolsEnv.postmanDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">IDE</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Environnements de développement : VS Code / IntelliJ IDEA</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.toolsEnv.ide')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.toolsEnv.ideDesc')}</p>
               </div>
             </div>
           </div>
@@ -63,24 +66,24 @@ export default function CompetencesSection() {
       </div>
 
       {/* Intelligence Artificielle */}
-      <div className="mb-12">
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+      <div className="mb-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
           <div className="flex-1">
             <h3 className="text-lg font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-3">
-              Intelligence Artificielle
+              {t('competences.ai.title')}
             </h3>
             <div className="space-y-2">
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">IA Générative</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Intégration d'outils d'IA générative dans les workflows de développement</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.ai.generative')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.ai.generativeDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">API IA</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Expérience dans l'intégration d'API de services d'intelligence artificielle</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.ai.api')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.ai.apiDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Utilisation de l'IA</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Utilisation de l'IA pour : Génération et optimisation du code, Prototypage rapide, Automatisation des tâches répétitives</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.ai.usage')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.ai.usageDesc')}</p>
               </div>
             </div>
           </div>
@@ -88,32 +91,32 @@ export default function CompetencesSection() {
       </div>
 
       {/* Architecture & Bonnes pratiques */}
-      <div className="mb-12">
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+      <div className="mb-4">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
           <div className="flex-1">
             <h3 className="text-lg font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent mb-3">
-              Architecture & Bonnes pratiques
+              {t('competences.architecture.title')}
             </h3>
             <div className="space-y-2">
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">API RESTful</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Maîtrise des concepts d'architecture microservices</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.architecture.restful')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.architecture.restfulDesc')}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Architecture</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Application de l'architecture MVC et de modèles de conception modulaires</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.architecture.arch')}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.architecture.archDesc')}</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white text-sm">Clean Code</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Mise en œuvre des principes SOLID et des bonnes pratiques Clean Code, tests et débogage</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.architecture.cleanCodeDesc') || 'Mise en œuvre des principes SOLID et des bonnes pratiques Clean Code, tests et débogage'}</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 dark:text-white text-sm">Performance</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Optimisation des performances et stratégies de scalabilité</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.architecture.performanceDesc') || 'Optimisation des performances et stratégies de scalabilité'}</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 dark:text-white text-sm">Sécurité</p>
-                <p className="text-gray-600 dark:text-gray-300 text-xs">Revue de code, refactorisation et maintien de la qualité du code</p>
+                <p className="font-semibold text-gray-900 dark:text-white text-sm">{t('competences.architecture.security') || 'Sécurité'}</p>
+                <p className="text-gray-600 dark:text-gray-300 text-xs">{t('competences.architecture.securityDesc') || 'Revue de code, refactorisation et maintien de la qualité du code'}</p>
               </div>
             </div>
           </div>
@@ -121,7 +124,7 @@ export default function CompetencesSection() {
       </div>
 
       {/* UX/UI & Design */}
-      <div className="mb-12">
+      <div className="mb-4">
         <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
           <div className="flex-1">
             <h3 className="text-lg font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-3">
@@ -147,7 +150,7 @@ export default function CompetencesSection() {
 
       {/* Compétences transversales */}
       <div>
-        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
+        <div className="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700">
           <div className="flex-1">
             <h3 className="text-lg font-bold bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent mb-3">
               Compétences transversales

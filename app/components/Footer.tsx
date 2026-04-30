@@ -42,14 +42,7 @@ export default function Footer({ scrollToSection }: FooterProps) {
                   Mes projets
                 </button>
               </li>
-              <li>
-                <button 
-                  onClick={() => scrollToSection('langages')} 
-                  className="text-gray-400 hover:text-white transition-colors"
-                >
-                  Mes langages
-                </button>
-              </li>
+             
               <li>
                 <button 
                   onClick={() => scrollToSection('contact')} 

@@ -146,16 +146,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
             >
               {t('header.nav.objectifs')}
             </button>
-            <button 
-              onClick={() => scrollToSection('langages')}
-              className={`transition-colors font-medium ${
-                activeSection === 'langages' 
-                  ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
-              }`}
-            >
-              {t('header.nav.langages')}
-            </button>
+            
             <button 
               onClick={() => scrollToSection('competences')}
               className={`transition-colors font-medium ${

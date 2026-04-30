@@ -67,10 +67,42 @@
   },
   "competences": {
     "title": "My Technical Skills",
-    "frontend": "Frontend Development",
-    "backend": "Backend Development",
-    "database": "Database & DevOps",
-    "tools": "Tools & Technologies"
+    "cmsWeb": {
+      "title": "CMS & Web",
+      "wordpress": "WordPress",
+      "wordpressDesc": "Development and customization of websites with WordPress",
+      "integration": "Web Integration",
+      "integrationDesc": "Theme and plugin customization",
+      "seo": "SEO Optimization",
+      "seoDesc": "Creating SEO and performance-optimized web solutions"
+    },
+    "toolsEnv": {
+      "title": "Tools & Environment",
+      "git": "Git & GitHub/GitLab",
+      "gitDesc": "Version control with Git (GitHub / GitLab workflows)",
+      "cicd": "CI / CD",
+      "cicdDesc": "Continuous integration and deployment concepts (CI/CD)",
+      "postman": "Postman",
+      "postmanDesc": "API testing and documentation with Postman",
+      "ide": "IDE",
+      "ideDesc": "Development environments: VS Code / IntelliJ IDEA"
+    },
+    "ai": {
+      "title": "Artificial Intelligence",
+      "generative": "Generative AI",
+      "generativeDesc": "Integration of generative AI tools in development workflows",
+      "api": "AI APIs",
+      "apiDesc": "Experience integrating artificial intelligence service APIs",
+      "usage": "AI Usage",
+      "usageDesc": "Using AI for: Code generation and optimization, Rapid prototyping, Automation of repetitive tasks"
+    },
+    "architecture": {
+      "title": "Architecture & Best Practices",
+      "restful": "RESTful APIs",
+      "restfulDesc": "Mastery of microservices architecture concepts",
+      "arch": "Architecture",
+      "archDesc": "Applying MVC architecture and modular design patterns"
+    }
   },
   "contact": {
     "title": "Contact",

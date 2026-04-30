@@ -67,10 +67,42 @@
   },
   "competences": {
     "title": "Mes Compétences Techniques",
-    "frontend": "Développement Frontend",
-    "backend": "Développement Backend",
-    "database": "Base de Données & DevOps",
-    "tools": "Outils & Technologies"
+    "cmsWeb": {
+      "title": "CMS & Web",
+      "wordpress": "WordPress",
+      "wordpressDesc": "Développement et personnalisation de sites web avec WordPress",
+      "integration": "Intégration Web",
+      "integrationDesc": "Personnalisation de thèmes et plugins",
+      "seo": "Optimisation SEO",
+      "seoDesc": "Création de solutions web optimisées pour le SEO et les performances"
+    },
+    "toolsEnv": {
+      "title": "Outils & Environnement",
+      "git": "Git & GitHub/GitLab",
+      "gitDesc": "Gestion de versions avec Git (workflows GitHub / GitLab)",
+      "cicd": "CI / CD",
+      "cicdDesc": "Notions d'intégration et de déploiement continus (CI/CD)",
+      "postman": "Postman",
+      "postmanDesc": "Tests et documentation d'API avec Postman",
+      "ide": "IDE",
+      "ideDesc": "Environnements de développement : VS Code / IntelliJ IDEA"
+    },
+    "ai": {
+      "title": "Intelligence Artificielle",
+      "generative": "IA Générative",
+      "generativeDesc": "Intégration d'outils d'IA générative dans les workflows de développement",
+      "api": "API IA",
+      "apiDesc": "Expérience dans l'intégration d'API de services d'intelligence artificielle",
+      "usage": "Utilisation de l'IA",
+      "usageDesc": "Utilisation de l'IA pour : Génération et optimisation du code, Prototypage rapide, Automatisation des tâches répétitives"
+    },
+    "architecture": {
+      "title": "Architecture & Bonnes pratiques",
+      "restful": "API RESTful",
+      "restfulDesc": "Maîtrise des concepts d'architecture microservices",
+      "arch": "Architecture",
+      "archDesc": "Application de l'architecture MVC et de modèles de conception modulaires"
+    }
   },
   "contact": {
     "title": "Contact",
