@@ -4,13 +4,11 @@ import { useState, useEffect } from 'react';
 import { useI18n } from '@/lib/i18n-context';
 
 interface HeaderProps {
-  isDarkMode: boolean;
-  toggleTheme: () => void;
   scrollToSection: (sectionId: string) => void;
   activeSection: string;
 }
 
-export default function Header({ isDarkMode, toggleTheme, scrollToSection, activeSection }: HeaderProps) {
+export default function Header({ scrollToSection, activeSection }: HeaderProps) {
   const { t, language, setLanguage } = useI18n();
   const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
 
@@ -30,7 +28,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
     <div className="relative language-dropdown">
       <button
         onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-        className="p-2 rounded-lg hover:bg-white/10 transition-colors text-white flex items-center gap-2"
+        className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-900 flex items-center gap-2"
         aria-label={t('language.toggle')}
       >
         <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -47,7 +45,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
       </button>
       
       {isLanguageDropdownOpen && (
-        <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden z-50">
+        <div className="absolute top-full right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden z-50">
           <button
             onClick={() => {
               setLanguage('fr');
@@ -55,17 +53,17 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
             }}
             className={`w-full px-4 py-3 text-left flex items-center gap-3 transition-colors ${
               language === 'fr' 
-                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' 
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                ? 'bg-blue-50 text-blue-600' 
+                : 'text-gray-900 hover:bg-gray-50'
             }`}
           >
             <span className="text-lg">🇫🇷</span>
             <div>
               <div className="font-medium">{t('language.french')}</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">Français</div>
+              <div className="text-sm text-gray-500">Français</div>
             </div>
             {language === 'fr' && (
-              <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 ml-auto" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-blue-600 ml-auto" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
               </svg>
             )}
@@ -78,17 +76,17 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
             }}
             className={`w-full px-4 py-3 text-left flex items-center gap-3 transition-colors ${
               language === 'en' 
-                ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400' 
-                : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
+                ? 'bg-blue-50 text-blue-600' 
+                : 'text-gray-900 hover:bg-gray-50'
             }`}
           >
             <span className="text-lg">🇬🇧</span>
             <div>
               <div className="font-medium">{t('language.english')}</div>
-              <div className="text-sm text-gray-500 dark:text-gray-400">English</div>
+              <div className="text-sm text-gray-500">English</div>
             </div>
             {language === 'en' && (
-              <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 ml-auto" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-5 h-5 text-blue-600 ml-auto" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
               </svg>
             )}
@@ -102,7 +100,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/55 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-bold text-white">
+          <div className="text-xl font-bold text-gray-900">
             {t('header.title')}
           </div>
           <nav className="flex items-center space-x-6">
@@ -111,7 +109,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
               className={`transition-colors font-medium ${
                 activeSection === 'accueil' 
                   ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
+                  : 'text-gray-900 hover:text-blue-400'
               }`}
             >
               {t('header.nav.accueil')}
@@ -121,7 +119,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
               className={`transition-colors font-medium ${
                 activeSection === 'apropos' 
                   ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
+                  : 'text-gray-900 hover:text-blue-400'
               }`}
             >
               {t('header.nav.apropos')}
@@ -131,7 +129,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
               className={`transition-colors font-medium ${
                 activeSection === 'projets' 
                   ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
+                  : 'text-gray-900 hover:text-blue-400'
               }`}
             >
               {t('header.nav.projets')}
@@ -141,7 +139,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
               className={`transition-colors font-medium ${
                 activeSection === 'objectifs' 
                   ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
+                  : 'text-gray-900 hover:text-blue-400'
               }`}
             >
               {t('header.nav.objectifs')}
@@ -152,7 +150,7 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
               className={`transition-colors font-medium ${
                 activeSection === 'competences' 
                   ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
+                  : 'text-gray-900 hover:text-blue-400'
               }`}
             >
               {t('header.nav.competences')}
@@ -162,27 +160,12 @@ export default function Header({ isDarkMode, toggleTheme, scrollToSection, activ
               className={`transition-colors font-medium ${
                 activeSection === 'contact' 
                   ? 'text-blue-400' 
-                  : 'text-white hover:text-blue-400'
+                  : 'text-gray-900 hover:text-blue-400'
               }`}
             >
               {t('header.nav.contact')}
             </button>
             <LanguageToggle />
-            <button
-              onClick={toggleTheme}
-              className="p-2 rounded-lg hover:bg-white/10 transition-colors text-white"
-              aria-label="Toggle theme"
-            >
-              {isDarkMode ? (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clipRule="evenodd" />
-                </svg>
-              ) : (
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" />
-                </svg>
-              )}
-            </button>
           </nav>
         </div>
       </div>

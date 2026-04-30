@@ -116,3 +116,20 @@
 .parallax-slow {
   will-change: transform;
 }
+
+/* 3D transform classes */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.rotate-y-12 {
+  transform: rotateY(12deg);
+}
+
+.rotate-y-6 {
+  transform: rotateY(6deg);
+}

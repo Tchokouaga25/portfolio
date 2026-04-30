@@ -14,7 +14,6 @@ import Footer from './components/Footer';
 import './animations.css';
 
 export default function Home() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [activeSection, setActiveSection] = useState('accueil');
   const [projectFilter, setProjectFilter] = useState('termine');
   const [formData, setFormData] = useState({
@@ -24,12 +23,6 @@ export default function Home() {
   });
 
   useEffect(() => {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      setIsDarkMode(true);
-      document.documentElement.classList.add('dark');
-    }
-
     // Détecter la section active lors du scroll
     const handleScroll = () => {
       const sections = ['accueil', 'apropos', 'objectifs', 'projets', 'langages', 'competences', 'contact'];
@@ -52,23 +45,6 @@ export default function Home() {
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  const toggleTheme = () => {
-    const newDarkMode = !isDarkMode;
-    setIsDarkMode(newDarkMode);
-    
-    console.log('Toggle theme:', newDarkMode);
-    
-    if (newDarkMode) {
-      document.documentElement.classList.add('dark');
-      localStorage.setItem('theme', 'dark');
-      console.log('Added dark class');
-    } else {
-      document.documentElement.classList.remove('dark');
-      localStorage.setItem('theme', 'light');
-      console.log('Removed dark class');
-    }
-  };
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -132,11 +108,8 @@ export default function Home() {
 
   return (
     <I18nProvider>
-      <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'dark' : ''}`}>
-        <div className={`min-h-screen ${isDarkMode ? 'bg-gray-900 text-gray-100' : 'bg-white text-gray-900'}`}>
+      <div className="min-h-screen bg-white text-gray-900">
         <Header 
-          isDarkMode={isDarkMode}
-          toggleTheme={toggleTheme}
           scrollToSection={scrollToSection}
           activeSection={activeSection}
         />
@@ -156,7 +129,6 @@ export default function Home() {
           handleSubmit={handleSubmit}
         />
         <Footer scrollToSection={scrollToSection} />
-        </div>
       </div>
     </I18nProvider>
   );

@@ -67,14 +67,14 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
   ];
 
   const ProjetCard = ({ projet, enCours = false }: { projet: any; enCours?: boolean }) => (
-    <div className={`${enCours ? 'bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900 dark:to-blue-800' : 'bg-white dark:bg-gray-900'} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700`}>
+    <div className={`${enCours ? 'bg-gradient-to-br from-blue-50 to-blue-100' : 'bg-white'} rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105 border border-gray-200 dark:border-gray-700`}>
       {/* Image du projet */}
       <div className="h-48 overflow-hidden">
         {projet.image ? (
           <img src={projet.image} alt={projet.titre} className="w-full h-full object-cover" />
         ) : (
-          <div className="w-full h-48 bg-gray-200 dark:bg-gray-700 flex items-center justify-center">
-            <span className="text-gray-500 dark:text-gray-400">Application Preview</span>
+          <div className="w-full h-48 bg-gray-200 flex items-center justify-center">
+            <span className="text-gray-600">Application Preview</span>
           </div>
         )}
       </div>
@@ -82,7 +82,7 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
       {/* Contenu du projet */}
       <div className="p-4">
         <div className="flex items-center gap-3 mb-3">
-          <h3 className="text-xl font-bold text-gray-900 dark:text-white line-clamp-1">{projet.titre}</h3>
+          <h3 className="text-xl font-bold text-gray-900 line-clamp-1">{projet.titre}</h3>
           {enCours && <span className="px-2 py-1 bg-yellow-500 text-white rounded-full text-xs font-semibold">En cours</span>}
         </div>
         
@@ -92,10 +92,10 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
         
         {/* Technologies */}
         <div className="mb-4">
-          <h4 className="font-semibold mb-2 text-gray-900 dark:text-white text-sm">Technologies:</h4>
+          <h4 className="font-semibold mb-2 text-gray-900 text-sm">Technologies:</h4>
           <div className="flex flex-wrap gap-1">
             {projet.technologies.map((tech: string, index: number) => (
-              <span key={index} className={`px-2 py-1 ${enCours ? 'bg-cyan-600 text-white' : 'bg-gray-100 dark:bg-gray-800'} rounded-full text-xs`}>
+              <span key={index} className={`px-2 py-1 ${enCours ? 'bg-cyan-600 text-white' : 'bg-gray-100'} rounded-full text-xs`}>
                 {tech}
               </span>
             ))}
@@ -106,10 +106,10 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
         {enCours && projet.progression && (
           <div className="mb-4">
             <div className="flex items-center gap-2 mb-1">
-              <span className="text-gray-700 dark:text-gray-300 text-sm">Progression:</span>
-              <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">{projet.progression}%</span>
+              <span className="text-gray-700 text-sm">Progression:</span>
+              <span className="text-sm font-semibold text-gray-700">{projet.progression}%</span>
             </div>
-            <div className="bg-gray-200 dark:bg-gray-600 rounded-full h-2">
+            <div className="bg-gray-200 rounded-full h-2">
               <div className="bg-green-500 h-2 rounded-full transition-all duration-300" style={{width: `${projet.progression}%`}}></div>
             </div>
           </div>
@@ -133,7 +133,7 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
             href={projet.demo} 
             target="_blank" 
             rel="noopener noreferrer" 
-            className="flex-1 px-2 py-1 border border-blue-600 text-blue-600 dark:text-blue-400 rounded-lg hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all text-xs font-medium flex items-center justify-center gap-1"
+            className="flex-1 px-2 py-1 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-all text-xs font-medium flex items-center justify-center gap-1"
           >
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
@@ -146,15 +146,15 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
   );
 
   return (
-    <section id="projets" className="py-8 bg-gray-50 dark:bg-gray-800">
+    <section id="projets" className="py-8 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">Mes Projets</h2>
       
         {/* Barre de filtrage type toggle */}
         <div className="flex justify-center mb-12">
-          <div className="relative bg-gray-200 dark:bg-gray-700 rounded-full p-1 w-100">
+          <div className="relative bg-gray-200 rounded-full p-1 w-100">
             <div 
-              className={`absolute top-1 h-10 bg-white dark:bg-gray-900 rounded-full shadow-md transition-all duration-300 ease-in-out ${
+              className={`absolute top-1 h-10 bg-white rounded-full shadow-md transition-all duration-300 ease-in-out ${
                 projectFilter === 'termine' ? 'left-1 w-[168px]' : 'left-[226px] w-[168px]'
               }`}
             />
@@ -163,8 +163,8 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
                 onClick={() => filterProjects('termine')}
                 className={`relative z-10 px-6 py-2 font-semibold transition-colors duration-300 ${
                   projectFilter === 'termine' 
-                    ? 'text-green-600 dark:text-green-400' 
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    ? 'text-green-600' 
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 Projets Terminés
@@ -173,8 +173,8 @@ export default function ProjetsSection({ projectFilter, filterProjects }: Projet
                 onClick={() => filterProjects('encours')}
                 className={`relative z-10 px-6 py-2 font-semibold transition-colors duration-300 ${
                   projectFilter === 'encours' 
-                    ? 'text-blue-600 dark:text-blue-400' 
-                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'
+                    ? 'text-blue-600' 
+                    : 'text-gray-600 hover:text-gray-900'
                 }`}
               >
                 Projets en Cours
