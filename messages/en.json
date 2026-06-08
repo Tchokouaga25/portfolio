@@ -15,12 +15,15 @@
     "welcome": "Welcome!",
     "iam": "I am",
     "name": "Claude Sandra TCHOKOUAGA",
-    "description": "Passionate web developer with over 5 years of experience in Java and full-stack development, I transform ideas into robust and innovative digital solutions. My expertise covers the entire development cycle, from database modeling to creating modern and intuitive interfaces. I am committed to delivering remarkable user experiences that combine performance, reliability, and creativity."
+    "description": "Passionate web developer with over 5 years of experience in Java and full-stack development, I transform ideas into robust and innovative digital solutions. My expertise covers the entire development cycle, from database modeling to creating modern and intuitive interfaces. I am committed to delivering remarkable user experiences that combine performance, reliability, and creativity.",
+    "badge": "Full-Stack Developer"
   },
   "apropos": {
     "title": "About",
     "parcours": "My Journey",
-    "description": "Passionate Full‑stack developer, I transform ideas into performant and scalable digital solutions. My expertise covers Java/Spring Boot and Laravel for robust backends, as well as React, Tailwind CSS and WordPress for modern and intuitive interfaces. I integrate generative AI into my process to optimize productivity and add value to each project. Available to take on new challenges, I am committed to creating remarkable user experiences, combining reliability, creativity and technical excellence."
+    "badge": "Full-Stack Developer",
+    "description1": "Passionate Full‑stack developer, I transform ideas into performant and scalable digital solutions. My expertise covers Java/Spring Boot and Laravel for robust backends, as well as React, Tailwind CSS and WordPress for modern and intuitive interfaces.",
+    "description2": "I integrate generative AI into my process to optimize productivity and add value to each project. Available to take on new challenges, I am committed to creating remarkable user experiences, combining reliability, creativity and technical excellence."
   },
   "objectifs": {
     "title": "My Goals",
@@ -50,20 +53,28 @@
     }
   },
   "langages": {
-    "title": "My Languages & Technologies & Framework",
+    "title": "My Languages & Technologies & Frameworks",
+    "sectionTitle": "My Languages & Frameworks",
+    "frontend": "Frontend Development",
+    "backend": "Backend Development",
+    "database": "Database & DevOps",
+    "outils": "Tools & Technologies",
     "intermediaire": "Intermediate",
-    "avance": "Advanced"
+    "avance": "Advanced",
+    "debutant": "Beginner"
   },
   "projets": {
     "title": "My Projects",
     "termine": "Completed Projects",
     "encours": "Ongoing Projects",
-    "technologies": "Technologies Used:",
+    "enCoursBadge": "In Progress",
+    "technologies": "Technologies:",
     "defis": "Challenges & Solutions:",
-    "lienGithub": "GitHub Link",
-    "demoLive": "Live Demo",
-    "progression": "Progress:",
-    "preview": "Preview"
+    "lienGithub": "GitHub",
+    "demoLive": "Demo",
+    "progression": "Progress",
+    "preview": "Preview",
+    "appPreview": "Application Preview"
   },
   "competences": {
     "title": "My Technical Skills",
@@ -94,14 +105,40 @@
       "api": "AI APIs",
       "apiDesc": "Experience integrating artificial intelligence service APIs",
       "usage": "AI Usage",
-      "usageDesc": "Using AI for: Code generation and optimization, Rapid prototyping, Automation of repetitive tasks"
+      "usageDesc": "Using AI for: code generation and optimization, rapid prototyping, task automation"
     },
     "architecture": {
       "title": "Architecture & Best Practices",
       "restful": "RESTful APIs",
       "restfulDesc": "Mastery of microservices architecture concepts",
       "arch": "Architecture",
-      "archDesc": "Applying MVC architecture and modular design patterns"
+      "archDesc": "Applying MVC architecture and modular design patterns",
+      "cleanCode": "Clean Code",
+      "cleanCodeDesc": "Implementation of SOLID principles, rigorous testing and debugging",
+      "performance": "Performance",
+      "performanceDesc": "Performance optimization and scalability strategies",
+      "security": "Security",
+      "securityDesc": "Code review, refactoring and maintaining code quality"
+    },
+    "uxui": {
+      "title": "UX/UI & Design",
+      "design": "UX/UI Design",
+      "designDesc": "Designing intuitive user-centered interfaces",
+      "responsive": "Responsive Design",
+      "responsiveDesc": "Responsive design principles and mobile-first approach",
+      "experience": "Accessibility",
+      "experienceDesc": "Best practices for usability and accessibility (WCAG concepts)"
+    },
+    "transversal": {
+      "title": "Soft Skills",
+      "problem": "Problem Solving",
+      "problemDesc": "Analytical thinking and structured resolution of complex problems",
+      "teamwork": "Teamwork",
+      "teamworkDesc": "Effective communication and collaboration in multidisciplinary teams",
+      "autonomy": "Autonomy",
+      "autonomyDesc": "Autonomy, organization and time management",
+      "monitoring": "Technology Watch",
+      "monitoringDesc": "Active monitoring, adaptability and continuous learning"
     }
   },
   "contact": {
@@ -115,10 +152,11 @@
     "telechargerCV": "Download my CV",
     "envoyerMessage": "Send me a message",
     "nom": "Name",
-    "emailPlaceholder": "Your name",
-    "emailField": "your@email.com",
+    "nomPlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "emailLabel": "Email",
     "message": "Message",
-    "messagePlaceholder": "Your message...",
+    "messagePlaceholder": "Your message…",
     "envoyer": "Send message",
     "succes": "Message sent successfully!"
   },
@@ -127,11 +165,25 @@
     "description": "Passionate web developer creating innovative and performant solutions.",
     "navigation": "Navigation",
     "reseaux": "Social Networks",
-    "copyright": "© 2024 Claude Sandra TCHOKOUAGA. All rights reserved."
+    "designed": "Designed with passion · Next.js & Tailwind CSS",
+    "copyright": "© 2024 Claude Sandra TCHOKOUAGA. All rights reserved.",
+    "nav": {
+      "accueil": "Home",
+      "apropos": "About",
+      "projets": "My projects",
+      "contact": "Contact"
+    }
   },
   "language": {
     "toggle": "Language",
     "french": "French",
     "english": "English"
+  },
+  "theme": {
+    "toggle": "Theme",
+    "dark": "Dark",
+    "light": "Light",
+    "switchToDark": "Switch to dark mode",
+    "switchToLight": "Switch to light mode"
   }
 }

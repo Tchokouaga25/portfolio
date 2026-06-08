@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { I18nProvider } from '@/lib/i18n-context';
+import { ThemeProvider } from '@/lib/theme-context';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import AProposSection from './components/AProposSection';
@@ -61,7 +62,7 @@ export default function Home() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     
     const subject = encodeURIComponent(`Message de ${formData.name} depuis le portfolio`);
@@ -107,8 +108,9 @@ export default function Home() {
   };
 
   return (
+    <ThemeProvider>
     <I18nProvider>
-      <div className="min-h-screen bg-white text-gray-900">
+      <div className="min-h-screen bg-[var(--bg-base)] text-[var(--text-1)]">
         <Header 
           scrollToSection={scrollToSection}
           activeSection={activeSection}
@@ -131,5 +133,6 @@ export default function Home() {
         <Footer scrollToSection={scrollToSection} />
       </div>
     </I18nProvider>
+    </ThemeProvider>
   );
 }

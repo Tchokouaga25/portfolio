@@ -4,180 +4,120 @@ import { useI18n } from '@/lib/i18n-context';
 
 export default function CompetencesSection() {
   const { t } = useI18n();
+
+  const categories = [
+    {
+      gradient: 'from-blue-500 to-violet-600',
+      accent: 'border-l-blue-500',
+      titleColor: 'text-blue-400',
+      title: t('competences.cmsWeb.title'),
+      items: [
+        { label: t('competences.cmsWeb.wordpress'),   desc: t('competences.cmsWeb.wordpressDesc') },
+        { label: t('competences.cmsWeb.integration'), desc: t('competences.cmsWeb.integrationDesc') },
+        { label: t('competences.cmsWeb.seo'),         desc: t('competences.cmsWeb.seoDesc') },
+      ],
+    },
+    {
+      gradient: 'from-orange-500 to-red-500',
+      accent: 'border-l-orange-500',
+      titleColor: 'text-orange-400',
+      title: t('competences.toolsEnv.title'),
+      items: [
+        { label: t('competences.toolsEnv.git'),     desc: t('competences.toolsEnv.gitDesc') },
+        { label: t('competences.toolsEnv.cicd'),    desc: t('competences.toolsEnv.cicdDesc') },
+        { label: t('competences.toolsEnv.postman'), desc: t('competences.toolsEnv.postmanDesc') },
+        { label: t('competences.toolsEnv.ide'),     desc: t('competences.toolsEnv.ideDesc') },
+      ],
+    },
+    {
+      gradient: 'from-yellow-500 to-orange-500',
+      accent: 'border-l-yellow-500',
+      titleColor: 'text-yellow-400',
+      title: t('competences.ai.title'),
+      items: [
+        { label: t('competences.ai.generative'), desc: t('competences.ai.generativeDesc') },
+        { label: t('competences.ai.api'),        desc: t('competences.ai.apiDesc') },
+        { label: t('competences.ai.usage'),      desc: t('competences.ai.usageDesc') },
+      ],
+    },
+    {
+      gradient: 'from-blue-500 to-green-500',
+      accent: 'border-l-emerald-500',
+      titleColor: 'text-emerald-400',
+      title: t('competences.architecture.title'),
+      items: [
+        { label: t('competences.architecture.restful'),   desc: t('competences.architecture.restfulDesc') },
+        { label: t('competences.architecture.arch'),      desc: t('competences.architecture.archDesc') },
+        { label: t('competences.architecture.cleanCode'), desc: t('competences.architecture.cleanCodeDesc') },
+        { label: t('competences.architecture.performance'), desc: t('competences.architecture.performanceDesc') },
+        { label: t('competences.architecture.security'),  desc: t('competences.architecture.securityDesc') },
+      ],
+    },
+    {
+      gradient: 'from-pink-500 to-purple-500',
+      accent: 'border-l-pink-500',
+      titleColor: 'text-pink-400',
+      title: t('competences.uxui.title'),
+      items: [
+        { label: t('competences.uxui.design'),      desc: t('competences.uxui.designDesc') },
+        { label: t('competences.uxui.responsive'),  desc: t('competences.uxui.responsiveDesc') },
+        { label: t('competences.uxui.experience'),  desc: t('competences.uxui.experienceDesc') },
+      ],
+    },
+    {
+      gradient: 'from-teal-500 to-cyan-500',
+      accent: 'border-l-teal-500',
+      titleColor: 'text-teal-400',
+      title: t('competences.transversal.title'),
+      items: [
+        { label: t('competences.transversal.problem'),    desc: t('competences.transversal.problemDesc') },
+        { label: t('competences.transversal.teamwork'),   desc: t('competences.transversal.teamworkDesc') },
+        { label: t('competences.transversal.autonomy'),   desc: t('competences.transversal.autonomyDesc') },
+        { label: t('competences.transversal.monitoring'), desc: t('competences.transversal.monitoringDesc') },
+      ],
+    },
+  ];
+
   return (
-    <section id="competences" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 bg-gradient-to-br ">
-      
-      <h2 className="text-2xl sm:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
-        {t('competences.title')}
-      </h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      {/* CMS & Web */}
-      <div className="mb-4">
-        <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-3">
-              {t('competences.cmsWeb.title')}
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.cmsWeb.wordpress')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.cmsWeb.wordpressDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.cmsWeb.integration')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.cmsWeb.integrationDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.cmsWeb.seo')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.cmsWeb.seoDesc')}</p>
+    <section id="competences" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg-base)' }}>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.05)_0%,transparent_60%)] pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold section-title gradient-text">
+            {t('competences.title')}
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {categories.map((cat, i) => (
+            <div
+              key={i}
+              className={`rounded-2xl p-6 border border-l-2 ${cat.accent} transition-all duration-300 hover:-translate-y-1 hover:shadow-xl`}
+              style={{ background: 'var(--bg-card)', borderColor: 'var(--border-color)' }}
+            >
+              <h3 className={`text-base font-bold mb-4 ${cat.titleColor} uppercase tracking-wide`}>
+                {cat.title}
+              </h3>
+              <div className="space-y-3">
+                {cat.items.map((item, j) => (
+                  <div key={j} className="flex gap-3">
+                    <div className="w-1.5 h-1.5 rounded-full mt-2 shrink-0 opacity-60 bg-current" style={{ color: 'inherit' }} />
+                    <div>
+                      <p className="font-semibold text-sm leading-snug" style={{ color: 'var(--text-1)' }}>
+                        {item.label}
+                      </p>
+                      <p className="text-xs leading-relaxed mt-0.5" style={{ color: 'var(--text-3)' }}>
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
-
-      {/* Outils & Environnement */}
-      <div className="mb-4">
-        <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent mb-3">
-              {t('competences.toolsEnv.title')}
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.toolsEnv.git')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.toolsEnv.gitDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.toolsEnv.cicd')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.toolsEnv.cicdDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.toolsEnv.postman')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.toolsEnv.postmanDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.toolsEnv.ide')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.toolsEnv.ideDesc')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Intelligence Artificielle */}
-      <div className="mb-4">
-        <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-yellow-500 to-orange-500 bg-clip-text text-transparent mb-3">
-              {t('competences.ai.title')}
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.ai.generative')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.ai.generativeDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.ai.api')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.ai.apiDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.ai.usage')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.ai.usageDesc')}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Architecture & Bonnes pratiques */}
-      <div className="mb-4">
-        <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-blue-500 to-green-500 bg-clip-text text-transparent mb-3">
-              {t('competences.architecture.title')}
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.architecture.restful')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.architecture.restfulDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.architecture.arch')}</p>
-                <p className="text-gray-600 text-xs">{t('competences.architecture.archDesc')}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Clean Code</p>
-                <p className="text-gray-600 text-xs">{t('competences.architecture.cleanCodeDesc') || 'Mise en œuvre des principes SOLID et des bonnes pratiques Clean Code, tests et débogage'}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Performance</p>
-                <p className="text-gray-600 text-xs">{t('competences.architecture.performanceDesc') || 'Optimisation des performances et stratégies de scalabilité'}</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">{t('competences.architecture.security') || 'Sécurité'}</p>
-                <p className="text-gray-600 text-xs">{t('competences.architecture.securityDesc') || 'Revue de code, refactorisation et maintien de la qualité du code'}</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* UX/UI & Design */}
-      <div className="mb-4">
-        <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-4 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent mb-3">
-              UX/UI & Design
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Design UX/UI</p>
-                <p className="text-gray-600 text-xs">Conception d'interfaces intuitives centrées utilisateur</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Responsive</p>
-                <p className="text-gray-600 text-xs">Principes de design responsive et mobile-first</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Expérience</p>
-                <p className="text-gray-600 text-xs">Bonnes pratiques d'utilisabilité et d'accessibilité (notions WCAG)</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Compétences transversales */}
-      <div>
-        <div className="bg-gradient-to-br from-white via-gray-50 to-white rounded-2xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-200">
-          <div className="flex-1">
-            <h3 className="text-lg font-bold bg-gradient-to-r from-teal-500 to-cyan-500 bg-clip-text text-transparent mb-3">
-              Compétences transversales
-            </h3>
-            <div className="space-y-2">
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Résolution de problèmes</p>
-                <p className="text-gray-600 text-xs">Esprit analytique et résolution de problèmes</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Travail d'équipe</p>
-                <p className="text-gray-600 text-xs">Communication efficace et travail en équipe</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Autonomie</p>
-                <p className="text-gray-600 text-xs">Autonomie et gestion du temps</p>
-              </div>
-              <div>
-                <p className="font-semibold text-gray-900 text-sm">Veille</p>
-                <p className="text-gray-600 text-xs">Veille technologique, Capacité d'adaptation et apprentissage continu</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      </div>
-
     </section>
   );
 }

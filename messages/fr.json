@@ -12,15 +12,18 @@
     }
   },
   "hero": {
-    "welcome": "Bienvenue!",
+    "welcome": "Bienvenue !",
     "iam": "Je suis",
     "name": "Claude Sandra TCHOKOUAGA",
-    "description": "Développeur web passionné, avec plus de 5 ans d'expérience en Java et en développement full-stack, je transforme des idées en solutions numériques robustes et innovantes. Mon expertise couvre l'ensemble du cycle de développement, de la modélisation de bases de données à la création d'interfaces modernes et intuitives. Je m'engage à offrir des expériences utilisateur remarquables qui allient performance, fiabilité et créativité."
+    "description": "Développeur web passionné, avec plus de 5 ans d'expérience en Java et en développement full-stack, je transforme des idées en solutions numériques robustes et innovantes. Mon expertise couvre l'ensemble du cycle de développement, de la modélisation de bases de données à la création d'interfaces modernes et intuitives. Je m'engage à offrir des expériences utilisateur remarquables qui allient performance, fiabilité et créativité.",
+    "badge": "Full-Stack Developer"
   },
   "apropos": {
     "title": "À Propos",
     "parcours": "Mon Parcours",
-    "description": "Développeur Full‑stack passionné, je transforme des idées en solutions numériques performantes et évolutives. Mon expertise couvre Java/Spring Boot et Laravel pour des backends robustes, ainsi que React, Tailwind CSS et WordPress pour des interfaces modernes et intuitives. J'intègre l'IA générative dans mon processus afin d'optimiser la productivité et d'apporter une valeur ajoutée à chaque projet. Disponible pour relever de nouveaux défis, je m'engage à créer des expériences utilisateur remarquables, alliant fiabilité, créativité et excellence technique."
+    "badge": "Full-Stack Developer",
+    "description1": "Développeur Full‑stack passionné, je transforme des idées en solutions numériques performantes et évolutives. Mon expertise couvre Java/Spring Boot et Laravel pour des backends robustes, ainsi que React, Tailwind CSS et WordPress pour des interfaces modernes et intuitives.",
+    "description2": "J'intègre l'IA générative dans mon processus afin d'optimiser la productivité et d'apporter une valeur ajoutée à chaque projet. Disponible pour relever de nouveaux défis, je m'engage à créer des expériences utilisateur remarquables, alliant fiabilité, créativité et excellence technique."
   },
   "objectifs": {
     "title": "Mes Objectifs",
@@ -50,20 +53,28 @@
     }
   },
   "langages": {
-    "title": "Mes Langages & Technologies & Framework",
+    "title": "Mes Langages & Technologies & Frameworks",
+    "sectionTitle": "Mes Langages & Frameworks",
+    "frontend": "Développement Frontend",
+    "backend": "Développement Backend",
+    "database": "Base de Données & DevOps",
+    "outils": "Outils & Technologies",
     "intermediaire": "Intermédiaire",
-    "avance": "Avancé"
+    "avance": "Avancé",
+    "debutant": "Débutant"
   },
   "projets": {
     "title": "Mes Projets",
     "termine": "Projets Terminés",
     "encours": "Projets en Cours",
-    "technologies": "Technologies Utilisées:",
-    "defis": "Défis & Solutions:",
-    "lienGithub": "Lien GitHub",
-    "demoLive": "Demo Live",
-    "progression": "Progression:",
-    "preview": "Preview"
+    "enCoursBadge": "En cours",
+    "technologies": "Technologies :",
+    "defis": "Défis & Solutions :",
+    "lienGithub": "GitHub",
+    "demoLive": "Demo",
+    "progression": "Progression",
+    "preview": "Preview",
+    "appPreview": "Aperçu de l'application"
   },
   "competences": {
     "title": "Mes Compétences Techniques",
@@ -94,14 +105,40 @@
       "api": "API IA",
       "apiDesc": "Expérience dans l'intégration d'API de services d'intelligence artificielle",
       "usage": "Utilisation de l'IA",
-      "usageDesc": "Utilisation de l'IA pour : Génération et optimisation du code, Prototypage rapide, Automatisation des tâches répétitives"
+      "usageDesc": "Utilisation de l'IA pour : génération et optimisation du code, prototypage rapide, automatisation des tâches"
     },
     "architecture": {
       "title": "Architecture & Bonnes pratiques",
       "restful": "API RESTful",
       "restfulDesc": "Maîtrise des concepts d'architecture microservices",
       "arch": "Architecture",
-      "archDesc": "Application de l'architecture MVC et de modèles de conception modulaires"
+      "archDesc": "Application de l'architecture MVC et de modèles de conception modulaires",
+      "cleanCode": "Clean Code",
+      "cleanCodeDesc": "Mise en œuvre des principes SOLID, tests et débogage rigoureux",
+      "performance": "Performance",
+      "performanceDesc": "Optimisation des performances et stratégies de scalabilité",
+      "security": "Sécurité",
+      "securityDesc": "Revue de code, refactorisation et maintien de la qualité du code"
+    },
+    "uxui": {
+      "title": "UX/UI & Design",
+      "design": "Design UX/UI",
+      "designDesc": "Conception d'interfaces intuitives centrées utilisateur",
+      "responsive": "Responsive Design",
+      "responsiveDesc": "Principes de design responsive et approche mobile-first",
+      "experience": "Accessibilité",
+      "experienceDesc": "Bonnes pratiques d'utilisabilité et d'accessibilité (notions WCAG)"
+    },
+    "transversal": {
+      "title": "Compétences transversales",
+      "problem": "Résolution de problèmes",
+      "problemDesc": "Esprit analytique et résolution structurée de problèmes complexes",
+      "teamwork": "Travail d'équipe",
+      "teamworkDesc": "Communication efficace et collaboration en équipe pluridisciplinaire",
+      "autonomy": "Autonomie",
+      "autonomyDesc": "Autonomie, organisation et gestion du temps",
+      "monitoring": "Veille technologique",
+      "monitoringDesc": "Veille active, capacité d'adaptation et apprentissage continu"
     }
   },
   "contact": {
@@ -115,10 +152,11 @@
     "telechargerCV": "Télécharger mon CV",
     "envoyerMessage": "Envoyez-moi un message",
     "nom": "Nom",
-    "emailPlaceholder": "Votre nom",
-    "emailField": "votre@email.com",
+    "nomPlaceholder": "Votre nom",
+    "emailPlaceholder": "votre@email.com",
+    "emailLabel": "Email",
     "message": "Message",
-    "messagePlaceholder": "Votre message...",
+    "messagePlaceholder": "Votre message…",
     "envoyer": "Envoyer le message",
     "succes": "Message envoyé avec succès !"
   },
@@ -127,11 +165,25 @@
     "description": "Développeur web passionné créant des solutions innovantes et performantes.",
     "navigation": "Navigation",
     "reseaux": "Réseaux Sociaux",
-    "copyright": "© 2024 Claude Sandra TCHOKOUAGA. Tous droits réservés."
+    "designed": "Conçu avec passion · Next.js & Tailwind CSS",
+    "copyright": "© 2024 Claude Sandra TCHOKOUAGA. Tous droits réservés.",
+    "nav": {
+      "accueil": "Accueil",
+      "apropos": "À propos",
+      "projets": "Mes projets",
+      "contact": "Contact"
+    }
   },
   "language": {
     "toggle": "Langue",
     "french": "Français",
     "english": "English"
+  },
+  "theme": {
+    "toggle": "Thème",
+    "dark": "Sombre",
+    "light": "Clair",
+    "switchToDark": "Passer en mode sombre",
+    "switchToLight": "Passer en mode clair"
   }
 }
