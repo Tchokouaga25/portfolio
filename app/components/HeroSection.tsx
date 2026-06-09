@@ -33,7 +33,7 @@ export default function HeroSection() {
   return (
     <section id="accueil" className="relative overflow-hidden" style={{ minHeight: 'calc(100vh - 4rem)' }}>
 
-      {/* Background image floutée */}
+      {/* Background image — flou adouci pour rester perceptible */}
       <div className="absolute inset-0 z-0 transition-all duration-1000">
         <Image
           src={images[currentImage].url}
@@ -41,19 +41,48 @@ export default function HeroSection() {
           fill
           className="object-cover"
           style={{
-            filter: 'blur(6px) brightness(0.25) saturate(0.8)',
-            transform: 'scale(1.1)',
+            filter: 'blur(3px) brightness(0.50) saturate(1.15)',
+            transform: 'scale(1.05)',
           }}
         />
       </div>
 
-      {/* Overlay gradient */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-[#06080f]/80 via-[#0c1222]/60 to-[#1e1b4b]/50" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-[#06080f]/60 via-transparent to-[#06080f]/40" />
+      {/* Couche 1 — dégradé bleu profond principal */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            'linear-gradient(135deg, rgba(3,7,18,0.70) 0%, rgba(15,23,42,0.50) 40%, rgba(30,27,75,0.45) 70%, rgba(3,7,18,0.65) 100%)',
+        }}
+      />
 
-      {/* Décoration lumineuse */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl z-10 dot-float-1" />
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-violet-600/10 rounded-full blur-3xl z-10 dot-float-2" />
+      {/* Couche 2 — halos chromatiques radiaux pour la profondeur */}
+      <div
+        className="absolute inset-0 z-10"
+        style={{
+          background:
+            'radial-gradient(ellipse 70% 60% at 18% 55%, rgba(37,99,235,0.22) 0%, transparent 58%),' +
+            'radial-gradient(ellipse 50% 45% at 78% 22%, rgba(99,102,241,0.15) 0%, transparent 55%)',
+        }}
+      />
+
+      {/* Blob 1 — bleu primaire, haut-gauche */}
+      <div className="absolute top-[12%] left-[8%] w-[500px] h-[500px] bg-blue-500/[0.18] rounded-full blur-3xl z-[15] dot-float-1" />
+      {/* Blob 2 — cyan, centre-droite */}
+      <div className="absolute top-[38%] right-[12%] w-[340px] h-[340px] bg-cyan-400/[0.13] rounded-full blur-3xl z-[15] dot-float-2" />
+      {/* Blob 3 — indigo, bas-centre */}
+      <div className="absolute bottom-[22%] left-[32%] w-[420px] h-[420px] bg-indigo-600/[0.16] rounded-full blur-3xl z-[15] dot-float-3" />
+      {/* Blob 4 — bleu clair, accent haut-droite */}
+      <div className="absolute top-[4%] right-[18%] w-[210px] h-[210px] bg-blue-300/[0.09] rounded-full blur-2xl z-[15] dot-float-1" style={{ animationDelay: '2.5s' }} />
+
+      {/* Vignettage cinématographique */}
+      <div
+        className="absolute inset-0 z-20 pointer-events-none"
+        style={{
+          background:
+            'radial-gradient(ellipse at center, transparent 35%, rgba(3,7,18,0.38) 80%, rgba(3,7,18,0.62) 100%)',
+        }}
+      />
 
       <div className="relative z-30 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
         <div

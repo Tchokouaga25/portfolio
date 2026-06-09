@@ -16,8 +16,8 @@
   --bg-deep:     #020508;
 
   /* Fond semi-transparent (header, menus) */
-  --header-bg:     rgba(6,  8,  15, 0.90);
-  --mobile-bg:     rgba(12, 18, 34, 0.98);
+  --header-bg:     linear-gradient(90deg, rgba(4,8,30,0.93) 0%, rgba(10,20,65,0.90) 35%, rgba(18,14,62,0.90) 65%, rgba(4,8,30,0.93) 100%);
+  --mobile-bg:     linear-gradient(135deg, rgba(8,14,50,0.98) 0%, rgba(18,12,58,0.98) 100%);
   --dropdown-bg:   #1a2438;
 
   --border-color:  rgba(255, 255, 255, 0.06);
@@ -38,22 +38,50 @@
 html.light {
   color-scheme: light;
 
-  --bg-base:     #f0f4ff;
-  --bg-surface:  #f8faff;
-  --bg-card:     #ffffff;
-  --bg-elevated: #eef2ff;
-  --bg-deep:     #e2e8ff;
+  /* Fonds semi-transparents — laissent le gradient body transparaître */
+  --bg-base:     transparent;
+  --bg-surface:  rgba(255, 255, 255, 0.44);
+  --bg-card:     rgba(255, 255, 255, 0.68);
+  --bg-elevated: rgba(232, 246, 255, 0.55);
+  --bg-deep:     rgba(207, 234, 255, 0.48);
 
-  --header-bg:     rgba(240, 244, 255, 0.92);
-  --mobile-bg:     rgba(248, 250, 255, 0.98);
-  --dropdown-bg:   #ffffff;
+  --header-bg:     linear-gradient(90deg, rgba(214,229,255,0.95) 0%, rgba(235,244,255,0.92) 50%, rgba(220,232,255,0.95) 100%);
+  --mobile-bg:     linear-gradient(135deg, rgba(225,236,255,0.98) 0%, rgba(235,242,255,0.98) 100%);
+  --dropdown-bg:   rgba(255, 255, 255, 0.92);
 
-  --border-color:  rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(59, 130, 246, 0.30);
+  --border-color:  rgba(59, 130, 246, 0.14);
+  --border-accent: rgba(59, 130, 246, 0.35);
 
   --text-1: #0f172a;
   --text-2: #374151;
   --text-3: #6b7280;
+}
+
+/* ── Fond "ciel abstrait" — thème clair uniquement ──────────── */
+html.light body {
+  background-color: #ddeeff;
+  background-attachment: fixed;
+  background-image:
+    /* Tache 1 — bleu ciel, haut-gauche */
+    radial-gradient(ellipse 65% 55% at  8% 12%, rgba(125, 211, 252, 0.55) 0%, transparent 65%),
+    /* Tache 2 — cyan, haut-droite */
+    radial-gradient(ellipse 50% 42% at 88%  8%, rgba(103, 232, 249, 0.42) 0%, transparent 60%),
+    /* Tache 3 — bleu pastel, centre-gauche */
+    radial-gradient(ellipse 55% 38% at 14% 56%, rgba(147, 197, 253, 0.38) 0%, transparent 58%),
+    /* Tache 4 — bleu diffus, centre légèrement haut */
+    radial-gradient(ellipse 72% 48% at 52% 42%, rgba(186, 230, 253, 0.26) 0%, transparent 62%),
+    /* Tache 5 — turquoise, bas-droite */
+    radial-gradient(ellipse 58% 52% at 86% 82%, rgba(94,  234, 212, 0.30) 0%, transparent 60%),
+    /* Tache 6 — cyan clair, bas-gauche */
+    radial-gradient(ellipse 52% 46% at 16% 90%, rgba(165, 243, 252, 0.38) 0%, transparent 58%),
+    /* Tache 7 — violet pastel léger, centre-droite */
+    radial-gradient(ellipse 44% 36% at 79% 44%, rgba(196, 181, 253, 0.16) 0%, transparent 55%),
+    /* Tache 8 — cyan, bas-centre */
+    radial-gradient(ellipse 38% 33% at 63% 74%, rgba(103, 232, 249, 0.22) 0%, transparent 52%),
+    /* Tache 9 — bleu ciel, centre-gauche bas */
+    radial-gradient(ellipse 42% 38% at 32% 76%, rgba(125, 211, 252, 0.20) 0%, transparent 55%),
+    /* Dégradé de base — ciel lumineux */
+    linear-gradient(160deg, #dbeafe 0%, #e0f2fe 22%, #f0f9ff 52%, #eff6ff 78%, #f5f8ff 100%);
 }
 
 /* ── Base ───────────────────────────────────────────────────── */
