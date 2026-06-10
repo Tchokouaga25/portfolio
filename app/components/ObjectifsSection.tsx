@@ -83,7 +83,7 @@ export default function ObjectifsSection() {
   return (
     <section id="objectifs" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg-base)' }}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(59,130,246,0.06)_0%,transparent_60%)] pointer-events-none" />
-
+      
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold section-title gradient-text">

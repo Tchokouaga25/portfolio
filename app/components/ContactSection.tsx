@@ -6,6 +6,7 @@ interface ContactSectionProps {
   formData: { name: string; email: string; message: string };
   handleInputChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
   handleSubmit: React.FormEventHandler<HTMLFormElement>;
+  formStatus: 'idle' | 'loading' | 'success' | 'error';
 }
 
 export default function ContactSection({ formData, handleInputChange, handleSubmit }: ContactSectionProps) {

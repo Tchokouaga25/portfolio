@@ -22,6 +22,7 @@ export default function Home() {
     email: '',
     message: ''
   });
+  const [formStatus, setFormStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   useEffect(() => {
     // Détecter la section active lors du scroll
@@ -62,29 +63,26 @@ export default function Home() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    
-    const subject = encodeURIComponent(`Message de ${formData.name} depuis le portfolio`);
-    const body = encodeURIComponent(
-      `Nom: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    
-    const mailtoLink = `mailto:claudesandra311@gmail.com?subject=${subject}&body=${body}`;
-    
-    // Créer un iframe invisible pour envoyer l'email automatiquement
-    const iframe = document.createElement('iframe');
-    iframe.style.display = 'none';
-    iframe.src = mailtoLink;
-    document.body.appendChild(iframe);
-    
-    // Nettoyer après un court délai
-    setTimeout(() => {
-      document.body.removeChild(iframe);
-    }, 100);
-    
-    // Optionnel : afficher une confirmation
-    alert('Message envoyé avec succès !');
+    setFormStatus('loading');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (res.ok) {
+        setFormStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setFormStatus('error');
+      }
+    } catch {
+      setFormStatus('error');
+    }
   };
 
   const filterProjects = (type: string) => {
@@ -125,10 +123,11 @@ export default function Home() {
           filterProjects={filterProjects}
         />
         <CompetencesSection />
-        <ContactSection 
+        <ContactSection
           formData={formData}
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}
+          formStatus={formStatus}
         />
         <Footer scrollToSection={scrollToSection} />
       </div>

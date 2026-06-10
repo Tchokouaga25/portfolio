@@ -81,7 +81,20 @@ export default function CompetencesSection() {
   return (
     <section id="competences" className="py-24 relative overflow-hidden" style={{ background: 'var(--bg-base)' }}>
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(59,130,246,0.05)_0%,transparent_60%)] pointer-events-none" />
-
+       {/* Carrés décoratifs de fond */}
+      <div className="absolute top-10 right-10 w-20 h-20 rotate-12 pointer-events-none" style={{ border: '2px solid rgba(96,165,250,0.7)', boxShadow: '0 0 12px rgba(96,165,250,0.25)' }} />
+      <div className="absolute top-24 right-28 w-10 h-10 rotate-45 pointer-events-none" style={{ border: '2px solid rgba(167,139,250,0.7)', boxShadow: '0 0 10px rgba(167,139,250,0.25)' }} />
+      <div className="absolute top-10 right-5 w-20 h-20 rotate-12 pointer-events-none" style={{ border: '2px solid rgba(96,165,250,0.55)', boxShadow: '0 0 10px rgba(96,165,250,0.20)' }} />
+      <div className="absolute top-24 right-18 w-10 h-10 rotate-45 pointer-events-none" style={{ border: '2px solid rgba(167,139,250,0.60)', boxShadow: '0 0 8px rgba(167,139,250,0.20)' }} />
+      <div className="absolute top-1/2 right-6 w-14 h-14 rotate-[20deg] pointer-events-none" style={{ border: '2px solid rgba(96,165,250,0.65)', boxShadow: '0 0 10px rgba(96,165,250,0.22)' }} />
+      <div className="absolute bottom-16 left-10 w-16 h-16 rotate-[30deg] pointer-events-none" style={{ border: '2px solid rgba(167,139,250,0.65)', boxShadow: '0 0 12px rgba(167,139,250,0.22)' }} />
+      <div className="absolute bottom-32 left-28 w-8 h-8 rotate-12 pointer-events-none" style={{ border: '2px solid rgba(96,165,250,0.60)', boxShadow: '0 0 8px rgba(96,165,250,0.20)' }} />
+      <div className="absolute bottom-10 left-10 w-16 h-16 rotate-[30deg] pointer-events-none" style={{ border: '2px solid rgba(167,139,250,0.55)', boxShadow: '0 0 10px rgba(167,139,250,0.20)' }} />
+      <div className="absolute bottom-12 left-28 w-8 h-8 rotate-12 pointer-events-none" style={{ border: '2px solid rgba(96,165,250,0.55)', boxShadow: '0 0 8px rgba(96,165,250,0.18)' }} />
+      <div className="absolute top-20 left-1/4 w-10 h-10 rotate-45 pointer-events-none" style={{ background: 'rgba(96,165,250,0.12)', border: '1px solid rgba(96,165,250,0.50)', boxShadow: '0 0 10px rgba(96,165,250,0.20)' }} />
+      <div className="absolute bottom-20 right-1/4 w-20 h-20 rotate-[15deg] pointer-events-none" style={{ background: 'rgba(167,139,250,0.10)', border: '1px solid rgba(167,139,250,0.50)', boxShadow: '0 0 14px rgba(167,139,250,0.20)' }} />
+      <div className="absolute top-1/3 left-8 w-14 h-14 rotate-[25deg] pointer-events-none" style={{ border: '2px solid rgba(96,165,250,0.50)', boxShadow: '0 0 10px rgba(96,165,250,0.18)' }} />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold section-title gradient-text">
