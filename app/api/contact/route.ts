@@ -1,4 +1,6 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(request: Request) {
   const { name, email, message } = await request.json();
@@ -7,20 +9,11 @@ export async function POST(request: Request) {
     return Response.json({ error: 'Champs manquants' }, { status: 400 });
   }
 
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: process.env.GMAIL_USER,
-      pass: process.env.GMAIL_APP_PASSWORD,
-    },
-  });
-
-  await transporter.sendMail({
-    from: `"Portfolio" <${process.env.GMAIL_USER}>`,
-    to: process.env.GMAIL_USER,
+  const { error } = await resend.emails.send({
+    from: 'Portfolio <onboarding@resend.dev>',
+    to: ['claudesandra311@gmail.com'],
     replyTo: email,
     subject: `Message de ${name} depuis le portfolio`,
-    text: `Nom: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
     html: `
       <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #60a5fa;">Nouveau message depuis le portfolio</h2>
@@ -32,6 +25,10 @@ export async function POST(request: Request) {
       </div>
     `,
   });
+
+  if (error) {
+    return Response.json({ error: error.message }, { status: 500 });
+  }
 
   return Response.json({ success: true });
 }
